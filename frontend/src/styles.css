@@ -138,6 +138,34 @@ button:disabled {
     margin-bottom: 15px;
 }
 
+.history-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.history-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-section li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.confirmation-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.confirmation-buttons button {
+    flex: 1;
+    padding: 8px;
+}
+
 @media (max-width: 768px) {
     .app-container {
         padding: 15px;

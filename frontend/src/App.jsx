@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import LogicGateTrainer from './components/LogicGateTrainer';
+import LoanPredictor from './components/LoanPredictor';
+import './styles.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [mode, setMode] = useState('logic'); // 'logic' o 'loan'
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="app-container">
+      <h1>Sistema Perceptrón Dual Mode</h1>
+      
+      <div className="mode-selector">
+        <button 
+          onClick={() => setMode('logic')} 
+          className={mode === 'logic' ? 'active' : ''}
+        >
+          Modo Compuertas
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button 
+          onClick={() => setMode('loan')} 
+          className={mode === 'loan' ? 'active' : ''}
+        >
+          Modo Préstamos
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      
+      {mode === 'logic' ? <LogicGateTrainer /> : <LoanPredictor />}
+    </div>
+  );
 }
-
-export default App
