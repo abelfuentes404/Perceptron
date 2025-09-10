@@ -39,83 +39,95 @@ Perceptron/
 ├── requirements.txt            # Librerías necesarias
 ├── *.pkl                       # Archivos con el aprendizaje guardado
 └── README.md                   # Documentación del proyecto
+```
 
+---
 
-🚀 Instalación y Uso
-1️⃣ Clonar el repositorio
+## 🚀 Instalación y Uso  
 
+### 1️⃣ Clonar el repositorio  
+```bash
 git clone https://github.com/abelfuentes404/Perceptron.git
 cd Perceptron
+```
 
-2️⃣ Crear entorno virtual (opcional, recomendado)
+### 2️⃣ Crear entorno virtual (opcional, recomendado)  
+```bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
+```
 
-3️⃣ Instalar dependencias
+### 3️⃣ Instalar dependencias  
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Generar dataset (si no existe)
+### 4️⃣ Generar dataset (si no existe)  
+```bash
 python crear_dataset.py
+```
 
-5️⃣ Ejecutar perceptrón clásico
+### 5️⃣ Ejecutar perceptrón clásico  
+```bash
 python clasica/perceptron.py
+```
 
-6️⃣ Ejecutar perceptrón cuántico
+### 6️⃣ Ejecutar perceptrón cuántico  
+```bash
 python perceptron-simple-cuantico.py
+```
 
-📊 Dataset de Ejemplo
+---
+
+## 📊 Dataset de Ejemplo  
+
 | Monto Préstamo | Ingresos Mensuales | Pagará |
-| -------------- | ------------------ | ------ |
-| 5000           | 8000               | 1 (Sí) |
-| 7000           | 3000               | 0 (No) |
-| 2000           | 2500               | 1 (Sí) |
-| 9000           | 4000               | 0 (No) |
+|----------------|---------------------|--------|
+| 5000           | 8000                | 1 (Sí) |
+| 7000           | 3000                | 0 (No) |
+| 2000           | 2500                | 1 (Sí) |
+| 9000           | 4000                | 0 (No) |
 
-🧩 Conceptos Clave
-🔹 Perceptrón Clásico
+---
 
-El perceptrón es un modelo matemático inspirado en las neuronas biológicas.
+## 🧩 Conceptos Clave  
 
-Entrada: valores (ej. ingresos, monto).
+### 🔹 Perceptrón Clásico  
+El perceptrón es un modelo matemático inspirado en las neuronas biológicas.  
+- Entrada: valores (ej. ingresos, monto).  
+- Suma ponderada con pesos.  
+- Función de activación (ej. escalón).  
+- Salida: clasificación (Sí/No).  
 
-Suma ponderada con pesos.
+### 🔹 Perceptrón Cuántico  
+- Usa representaciones en **vectores de estado cuántico** y **compuertas cuánticas**.  
+- Explora cómo la **superposición y entrelazamiento** pueden servir para el aprendizaje.  
+- En este proyecto se usa de forma **experimental**, comparando contra el modelo clásico.  
 
-Función de activación (ej. escalón).
+---
 
-Salida: clasificación (Sí/No).
+## 📦 Requisitos  
 
-🔹 Perceptrón Cuántico
+Las principales dependencias están en `requirements.txt`, pero incluyen:  
 
-Usa representaciones en vectores de estado cuántico y compuertas cuánticas.
+- `numpy`  
+- `pandas`  
+- `scikit-learn`  
+- `qiskit` (para la parte cuántica)  
 
-Explora cómo la superposición y entrelazamiento pueden servir para el aprendizaje.
+---
 
-En este proyecto se usa de forma experimental, comparando contra el modelo clásico.
+## 📈 Futuras Mejoras  
 
-📦 Requisitos
+- Extender a perceptrones multicapa (MLP).  
+- Comparar métricas de desempeño entre el modelo clásico y cuántico.  
+- Visualizaciones gráficas de fronteras de decisión.  
+- Integración con datasets más complejos.  
 
-Las principales dependencias están en requirements.txt, pero incluyen:
+---
 
-numpy
+## 👨‍💻 Autor  
 
-pandas
-
-scikit-learn
-
-qiskit (para la parte cuántica)
-
-📈 Futuras Mejoras
-
-Extender a perceptrones multicapa (MLP).
-
-Comparar métricas de desempeño entre el modelo clásico y cuántico.
-
-Visualizaciones gráficas de fronteras de decisión.
-
-Integración con datasets más complejos.
-
-👨‍💻 Autor
-
-Abel Fuentes Guzmán
-https://github.com/abelfuentes404
+**Abel Fuentes Guzmán**  
+🔗 [GitHub](https://github.com/abelfuentes404)  
